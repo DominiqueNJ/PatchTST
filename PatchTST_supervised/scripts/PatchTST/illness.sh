@@ -1,9 +1,9 @@
-if [ ! -d "./logs" ]; then
-    mkdir ./logs
+if [ ! -d "/kaggle/working/logs" ]; then
+    mkdir /kaggle/working/logs
 fi
 
-if [ ! -d "./logs/LongForecasting" ]; then
-    mkdir ./logs/LongForecasting
+if [ ! -d "/kaggle/working/logs/LongForecasting" ]; then
+    mkdir /kaggle/working/logs/LongForecasting
 fi
 seq_len=104
 model_name=PatchTST
@@ -40,5 +40,5 @@ do
       --des 'Exp' \
       --train_epochs 100\
       --lradj 'constant'\
-      --itr 1 --batch_size 16 --learning_rate 0.0025 >logs/LongForecasting/$model_name'_'$model_id_name'_'$seq_len'_'$pred_len.log 
+      --itr 1 --batch_size 16 --learning_rate 0.0025 >/kaggle/working/logs/LongForecasting/$model_name'_'$model_id_name'_'$seq_len'_'$pred_len.log 
 done
