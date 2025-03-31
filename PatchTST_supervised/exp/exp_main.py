@@ -221,7 +221,7 @@ class Exp_Main(Exp_Basic):
         
         if test:
             print('loading model')
-            self.model.load_state_dict(torch.load(os.path.join('./checkpoints/' + setting, 'checkpoint.pth')))
+            self.model.load_state_dict(torch.load(os.path.join('/kaggle/working/checkpoints/' + setting, 'checkpoint.pth')))
 
         preds = []
         trues = []
