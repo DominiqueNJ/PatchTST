@@ -226,7 +226,7 @@ class Exp_Main(Exp_Basic):
         preds = []
         trues = []
         inputx = []
-        folder_path = './test_results/' + setting + '/'
+        folder_path = '/kaggle/working/test_results/' + setting + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
@@ -293,7 +293,7 @@ class Exp_Main(Exp_Basic):
         inputx = inputx.reshape(-1, inputx.shape[-2], inputx.shape[-1])
 
         # result save
-        folder_path = './results/' + setting + '/'
+        folder_path = '/kaggle/working/results/' + setting + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
@@ -358,7 +358,7 @@ class Exp_Main(Exp_Basic):
         preds = preds.reshape(-1, preds.shape[-2], preds.shape[-1])
 
         # result save
-        folder_path = './results/' + setting + '/'
+        folder_path = '/kaggle/working/results/' + setting + '/'
         if not os.path.exists(folder_path):
             os.makedirs(folder_path)
 
